@@ -101,11 +101,6 @@ Here are a few examples of the kinds of prompts you might give Gemini, without a
 |**Standard Prompt:**|<blockquote>> I would like you to create a "log" of our current session so I have notes about what we worked on to reference later.  Create a new file ~/gemini/gemini_logs/2025-10-05.md and include what our goals were, what we accomplished, the challenges we faced and how we resolved them, and a short list of reasonable next steps for us to use tomorrow when we start our session.  Go ahead and do that now, and after you finish I want you to search for python libraries I can use for converting GPS coordinates into Geo Location data, like Country/State/City and create a draft file ~/gemini/documentation/feature/geo_location.md outlining a step-by-step todo list for implementing one of these into my application.</blockquote>|
 |**Directive Based:**|<blockquote>> `*log*` `*exe*` `*nxt*` `*gog*` python libraries gps to geo -> save implementation draft to `*docu*`feature/geo_location.md</blockquote>|
 
-| Directives | Log, Execute, Next, Search --> Folder Shortcut|
-| :--- | :--- |
-|**Standard Prompt:**|<blockquote>> I would like you to create a "log" of our current session so I have notes about what we worked on to reference later.  Create a new file ~/gemini/gemini_logs/2025-10-05.md and include what our goals were, what we accomplished, the challenges we faced and how we resolved them, and a short list of reasonable next steps for us to use tomorrow when we start our session.  Go ahead and do that now, and after you finish I want you to search for python libraries I can use for converting GPS coordinates into Geo Location data, like Country/State/City and create a draft file ~/gemini/documentation/feature/geo_location.md outlining a step-by-step todo list for implementing one of these into my application.</blockquote>|
-|**Directive Based:**|<blockquote>> `*log*` `*exe*` `*nxt*` `*gog*` python libraries gps to geo -> save implementation draft to `*docu*`feature/geo_location.md</blockquote>|
-
 | Directives | Show Log, Todo List, Folder Shortcut, Execute |
 | :--- | :--- |
 |**Standard Prompt:**|<blockquote>> Load the file ~/gemini/gemini_logs/ for yesterday's date and give me a quick summary of what we worked on again.  Create a file ~/gemini/documentation/todo_2025-10-06.md with a todo list of what today's objectives should be based on the log.  Go ahead and create the log file (you don't need to wait for me to confirm your next step).</blockquote>|
@@ -113,7 +108,7 @@ Here are a few examples of the kinds of prompts you might give Gemini, without a
 
 | Directives | Vet, Folder Shortcut, Todo, Folder Shortcut, Next, Argue, Folder Shortcut, Execute |
 | :--- | :--- |
-|**Standard Prompt:**|<blockquote>> One of the developers pushed several updated to the ~/gemini/flask_api_backend/app/api.py file yesterday implementing several new API endpoints.  The code seems to be working, but I have a feeling it could be improved.  Analyze the full file and provide a critial review of the code.  Create a file ~/gemini/documentation/api_updates_review.md that I can share with the developer to go over some key points based on your review.  After that, I want you do to review it again, but this time take a more agreesive position (assume it is breaking things) and do a thorough strees test of the logic and save it to ~/gemini/documentation/api_problems.md so I can share it with their manager.  Go ahead and complete those 2 tasks now.</blockquote>|
+|**Standard Prompt:**|<blockquote>> One of the developers pushed several updated to the ~/gemini/flask_api_backend/app/api.py file yesterday implementing several new API endpoints.  The code seems to be working, but I have a feeling it could be improved.  Analyze the full file and provide a critial review of the code.  Create a file ~/gemini/documentation/api_updates_review.md that I can share with the developer to go over some key points based on your review.  After that, I want you do to review it again, but this time take a more agreesive position (assume it is breaking things) and do a thorough strees test of the logic and save it to ~/gemini/documentation/api_problems.md so I can review it myself.  Go ahead and complete those 2 tasks now.</blockquote>|
 |**Directive Based:**|<blockquote>> `*vet*` `*fabk*`app/api.py `*tod*` `*docu*`api_updates_review.md `*nxt*` `*arg*` `*docu*`api_problems.md `*exe*`</blockquote>|
 
 | Directives | New Directive, Search, Execute |
@@ -192,10 +187,10 @@ There are two ways to configure this:
 
 You can directly edit your `~/.gemini/GEMINI.md` file and add the following memory:
 
-```markdown
-## Gemini Added Memories
-- "When the user says "hi", I should try to read the file ~/gemini/gemini_bootstrap/gemini_bootstrap.md and get instructions from it. If I cannot find the file, I will let the user know."
-```
+| |
+| :--- |
+| ## Gemini Added Memories |
+| - "When the user says "hi", I should try to read the file ~/gemini/gemini_bootstrap/gemini_bootstrap.md and get instructions from it. If I cannot find the file, I will let the user know." |
 
 **B) Interactive Session**
 
